@@ -1,0 +1,34 @@
+{
+  "title": "王小姐家庭 家系圖",
+  "client": "mom",
+  "client_style": "fill",
+  "household": ["mom", "d1", "s1"],
+  "persons": [
+    {"id": "mgf", "sex": "M", "deceased": true, "gen": 0, "x": 3},
+    {"id": "mgm", "sex": "F", "age": 70, "label": "外婆", "gen": 0, "x": 4},
+    {"id": "dad", "sex": "M", "age": 35, "deceased": true, "label": "父親", "note": "倉庫管理員", "gen": 1, "x": 1},
+    {"id": "mom", "sex": "F", "age": 32, "label": "母親", "gen": 1, "x": 3},
+    {"id": "bro", "sex": "M", "label": "舅舅", "note": "卡車司機", "gen": 1, "x": 4.5},
+    {"id": "d1", "sex": "F", "age": 10, "label": "女兒", "gen": 2.2, "x": 1.5},
+    {"id": "s1", "sex": "M", "age": 8, "label": "兒子", "marks": ["chronic"], "note": "氣喘", "gen": 2.2, "x": 2.5}
+  ],
+  "unions": [
+    {"a": "mgf", "b": "mgm", "children": ["mom", "bro"]},
+    {"a": "dad", "b": "mom", "type": "married", "note": "2013 結婚", "level": 1, "children": ["d1", "s1"]}
+  ],
+  "relations": [
+    {"from": "mom", "to": "d1", "type": "close"},
+    {"from": "mom", "to": "bro", "type": "conflict"}
+  ],
+  "eco": {
+    "title": "王小姐家庭 生態圖",
+    "center": ["mom", "d1", "s1"],
+    "systems": [
+      {"name": "天主教堂", "size": "M", "distance": "near", "line": "strong", "flow": "both"},
+      {"name": "精神科醫院", "size": "M", "distance": "mid", "line": "normal", "flow": "in", "note": "每月回診"},
+      {"name": "社福單位", "size": "L", "distance": "mid", "line": "normal", "flow": "in"},
+      {"name": "國小", "size": "S", "distance": "near", "line": "weak", "target": "d1"},
+      {"name": "男友", "size": "M", "distance": "far", "line": "stress"}
+    ]
+  }
+}

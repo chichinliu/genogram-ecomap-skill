@@ -1,0 +1,4 @@
+# 真實個案資料屬敏感資訊，一律不進版控
+case*.json
+out/
+.DS_Store
